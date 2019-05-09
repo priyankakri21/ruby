@@ -1,13 +1,27 @@
- <% @docs.each do |doc| %>
+ 
+ 
+ 	<div class="main-wrap">
+	  <div class="container docs">
+		<div class="box">
+			<div class="content">
+				<% @docs.each do |doc| %>
+				<h3><%= link_to doc.title, doc %></h3>
+				<p><%= time_ago_in_words(doc.created_at) %></p>
+				<p><%= truncate(doc.Content, length:50) %></p>
+				<br>
+				<% end %>
+				
+			</div>
+			<%= link_to "Create New /", new_doc_path %>
 
- <h2><%= link_to doc.title, doc %> </h2>
- <p><%= time_ago_in_words(doc.created_at) %> </p>
- <p><%= truncate(doc.Content, length:50) %></p>
-<% end %>
-<%= link_to "Create New", new_doc_path %>
+			<%= link_to ' Back', docs_path %>
+		</div>
 
-<%= will_paginate @docs %>
-
+	  </div>
+	 </div>
+    <div class ="text-center" >
+    <%= will_paginate @docs %>
+    </div>
 
 
 

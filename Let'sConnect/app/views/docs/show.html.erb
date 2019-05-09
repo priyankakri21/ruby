@@ -1,6 +1,18 @@
-<h1><%= @doc.title %></h1>
-<p><%= @doc.Content %></p>
+<div class="main-wrap">
+  <div class="container docs">
+	<div class="box">
+	  <div class="content">
 
-<%= link_to "All Docs", docs_path %>
-<%= link_to "Fix Docs", edit_doc_path(@doc) %>
-<%= link_to "Trash it", doc_path(@doc),method: :delete, data: { confirm: "Are U Sure" } %>
+
+<h3><%= @doc.title %></h3>
+<p><%= @doc.Content %></p>
+<br>
+<%= link_to "All Docs /", docs_path %>
+<%= link_to "Fix Docs /", edit_doc_path(@doc) %>
+<%= link_to "Trash it /", doc_path(@doc),method: :delete, data: { confirm: "Are U Sure" } %>
+<%= link_to 'Back', docs_path %>
+
+</div>
+     </div>
+    </div>
+   </div>

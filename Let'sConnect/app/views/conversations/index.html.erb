@@ -1,0 +1,53 @@
+<!-- main doc -->
+<div class="container p-msg">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel-group">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1" class="msg-panel-head" title="click to open">Recent Chats</a>
+            </h4>
+          </div>
+           <div id="collapse1" class="panel-collapse collapse">
+              <div class="panel-body">
+                <% @conversations.each do |conversation| %>
+      <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+       <% if conversation.sender_id == current_user.id %>
+         <% recipient = User.find(conversation.recipient_id) %>
+       <% else %>
+         <% recipient = User.find(conversation.sender_id) %>
+       <% end %>
+       <h3><%= link_to recipient.username, conversation_pmessages_path(conversation)%></h3>
+      <% end %>
+     <% end %>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel-group">
+         <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2" class="msg-panel-head" title="click to open">Friend List</a>
+            </h4>
+          </div>
+           <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                <% @users.each do |user| %>
+        <% if user.id != current_user.id %>
+         <div class="item"><h3>
+      <%= link_to user.username,
+       conversations_path(sender_id: current_user.id, recipient_id: user.id), method: "post"%>
+     </h3></div>
+      <% end %>
+     <% end %>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

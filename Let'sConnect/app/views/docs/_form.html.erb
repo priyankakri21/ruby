@@ -1,6 +1,21 @@
+ <div class="main-wrap">
+  <div class="container docs">
+	<div class="box">
+	  <div class="content">
+	  	<div class="loginbox">
 <%= simple_form_for @doc do |f| %>
   <%= f.input :title %>
   <%= f.input :Content %>
+  <br>
   <%= f.button :submit %>
+
 <% end %>
+<%= link_to 'Back', docs_path %>
+    
+      </div>
+     </div>
+    </div>
+   </div>
+</div>
+
   

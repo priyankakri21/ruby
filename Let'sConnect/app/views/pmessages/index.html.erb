@@ -1,0 +1,67 @@
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+
+
+ <div class="chat-wrapper">
+<div class="my-wrap"> 
+<div class="head-wrap">
+  <h1 class="chat-head">
+    <span>
+      <%= link_to '<i class="fa fa-long-arrow-left"></i>'.html_safe,
+'/conversations', { :class => 'tooltips, btn btn-link back-arrow', 'data-toggle' => 'tooltip',
+   'data-placement' => 'right', :title => 'Back To Inbox' } %>
+    </span>Chat</h1>
+</div>
+<div class="well msg-output" id="chatbox">
+ <% @pmessages.each do |pmessage| %>
+  <% if pmessage.body %>
+   <% user = User.find(pmessage.user_id) %>
+   
+    <div class="msg-wrap" >
+  <div class="msg-info">
+        <span class="user-name"><%= user.username %></span>
+    <span class="msg-time"><%= pmessage.message_time %></span>
+
+  <div>
+  <div class="message"><%= pmessage.body %>
+  </div>
+</div >
+
+
+ <% end %>
+<% end %>
+
+
+ <%= form_for [@conversation, @pmessage] do |f| %>
+<div class="input-group" >
+   <%= f.text_field :body, placeholder: "say something", class: "form-control" %> 
+  <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+<div class="input-group-btn">
+    <%= f.submit "Send", class: "btn btn-primary theme-btn" %>
+   </div></div>
+<% end %>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<script>
+$(document).ready(function(){
+  var messages = $('#chatbox');
+
+  function init(){
+    messages.scrollTop(messages[0].scrollHeight);
+  }
+   window.setTimeout(init,50);
+});
+</script>

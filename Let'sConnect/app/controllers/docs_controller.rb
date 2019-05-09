@@ -1,7 +1,7 @@
 class DocsController < ApplicationController
   before_action :find_doc, only: [:show, :edit, :update, :destroy]
 def index
- @docs= Doc.where(user_id: current_user).paginate(page: params[:page], per_page: 2)
+ @docs= Doc.where(user_id: current_user).paginate(page: params[:page], per_page: 4)
 end
 
 def show

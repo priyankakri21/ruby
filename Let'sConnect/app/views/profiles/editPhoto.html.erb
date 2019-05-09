@@ -2,8 +2,22 @@
 
 
 <%= form_for( :profile, url: addProfile_url(@profile), method: :patch , html: { multipart: true , id: current_user.id } ) do |f| %>
-	
-	<%= f.text_field :user_id, class: 'form-control', value: current_user.id %>
-    <%= f.file_field :image, class: "btn btn-primary "  %>
-  	<%= f.submit %>
+	<div class="upload-container">
+		<%= f.text_field :user_id, class: 'form-control hidden', value: current_user.id %>
+		<div class="upload-wrap">
+			<%= f.file_field :image, :id => 'files' %>
+	   		<label for="files" class="upload-btn"><i class="fa fa-camera"></i></label>
+	 	</div>
+	 	<span class="file-path" id="file-path"></span>
+	  	<span class="dp-save"><%= f.submit %></span>
+  	</div>
 <% end %>
+
+
+<script>
+	(function($) {
+  $('#files').bind('change', function() {
+    $("#file-path").html($('#files').val());
+  });
+})(jQuery)
+</script>

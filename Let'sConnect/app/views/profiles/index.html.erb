@@ -1,42 +1,56 @@
-
-<div class=" profile container-fluid">
-<div class=" profileContainer container-fluid" >
- 	<div class="profilePic" >
-<% if current_user.profile.present? && current_user.profile.image.present? %>
- <%= image_tag current_user.profile.image.url(:medium) ,class: "img" %>
- <% else %>
-  <%= image_tag("avatar.png", class: "img-responsive img", alt: "avtar") %>
-   <% end %>
- 	</div>
- 	<div class="profileDetail" >
- 	   <h3>Username:<strong><%= current_user.username %></strong>.</h3>
- 	   <h3>Email:<strong><%= current_user.email %></strong>
-  </h3>
- 	</div>
- 	
+<div class="container">
+	<div class="profile-wrap-main">
+	<div class="profile-wrap">
+		<% if current_user.profile.present? && current_user.profile.image.present? %>
+ 		<%= image_tag current_user.profile.image.url(:medium) %>
+ 		<% else %>
+  		<%= image_tag("avatar.png", class: "img-responsive img", alt: "avtar") %>
+  		 <% end %>
+	</div>
+	<div class="info-wrap">
+			<h2 class="user-profile-name"><%= current_user.username %></h2>
+			<div class="email-txt"><%= current_user.email %></div>
+	</div>
 </div>
-
-<%= link_to "Add Photo ", addProfile_path, class: "btn btn-primary" %>
-
-<%= link_to "My Cabinate", docs_path, class: "btn btn-primary" %>
-
-<%= link_to "Group chat", pages_path, class: "btn btn-primary" %>
-
 </div>
 
 <!-- Post -->
+<div class="container">
+	<div class="cabinet-wrapper">
+		<div class="my-cabinet">
+			<div>
+				<i class="fa fa-database"></i>
+			</div>	
+			<div>
+				<%= link_to "My Cabinet", docs_path, class: "btn cabinet-btn" %>
+			</div>
+		</div>
+		<div class="my-cabinet">
+			<div>
+				<i class="fa fa-picture-o"></i>
+			</div>	
+			<div>
+				<%= link_to "Update Profile Pic ", addProfile_path, class: "btn cabinet-btn" %>
+			</div>
+		</div>
+		<div class="my-cabinet">
+			<div>
+				<i class="fa fa-group"></i>
+			</div>	
+			<div>
+				<%= link_to "Group chat", pages_path, class: "btn cabinet-btn" %>
+			</div>
+		</div>
+	   <div class="my-cabinet">
+			<div>
+				<i class="fa fa-group"></i>
+			</div>	
+			<div>
+				<%= link_to "Personal chat", pmessage_path, class: "btn cabinet-btn" %>
+			</div>
+		</div>
+	   
 
-
-
-
-<% if user_signed_in? %>
- 
-  
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
--
+	</div>
+</div>
 

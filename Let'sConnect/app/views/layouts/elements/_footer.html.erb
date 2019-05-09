@@ -4,26 +4,29 @@
           <div class="container">
             <div class="row">
                   <div class="col-md-3 col-sm-6">
-                    <h4 class="footer-heading">Let's Connect</h4>
+                    <div>
+                    <a href="/index" class="ftr-logo" title="Let's Connect">
+                      Let's<%= image_tag("connect.png", class: "img-responsive", alt: "Let's Connect") %> 
+                    </a>
+                    </div>
                       <p class="footer-para">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
                       <div class="social-icons">
-                        <a href="#" title="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" title="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" title="instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://twitter.com/home?prefetchTimestamp=1556789781431" title="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="http://m.facebook.com/samar.singh.7509" title="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="http://www.linkedin.com/in/samar-bahadur-singh-033a0a120" title="linkedin"><i class="fa fa-linkedin"></i></a>
                       </div>
                   </div>
                   <div class="col-md-4 col-sm-6">
-                    <h4 class="footer-heading">Recent Blog</h4>
+                    <h4 class="footer-heading">Recent Notices</h4>
                     <div class="media">
                       <div class="media-left">
                         <%= image_tag "image_1.jpg" %>
                       </div>
                       <div class="media-body">
-                        <h5 class="media-heading">Even the all-powerful Pointing has no control about</h5>
+                        <h5 class="media-heading">Report of Eight Semeter has been uploaded</h5>
                         <div class="blog-stat xs">
-                          <a href="#"><i class="fa fa-calendar"></i>Sep 10, 2018</a>
-                          <a href="#"><i class="fa fa-user"></i>Admin</a>
-                          <a href="#"><i class="fa fa-commenting"></i>3</a>
+                          <a href="#"><i class="fa fa-calendar"></i>May 12,2019</a>
+                          
                         </div>
                       </div>
                     </div>
@@ -34,9 +37,8 @@
                       <div class="media-body">
                         <h5 class="media-heading">Even the all-powerful Pointing has no control about</h5>
                         <div class="blog-stat xs">
-                          <a href="#"><i class="fa fa-calendar"></i>Sep 10, 2018</a>
-                          <a href="#"><i class="fa fa-user"></i>Admin</a>
-                          <a href="#"><i class="fa fa-commenting"></i>3</a>
+                          <a href="#"><i class="fa fa-calendar"></i>May 15, 2019</a>
+                         
                         </div>
                       </div>
                     </div>
@@ -44,10 +46,9 @@
                   <div class="col-md-2 col-sm-6">
                       <h4 class="footer-heading">Site Links</h4>
                     <ul class="list-unstyled footer-li">
-                      <li><a href="#" title="text">Home</a></li>
-                      <li><a href="#" title="text">About</a></li>
-                      <li><a href="#" title="text">Course</a></li>
-                      <li><a href="#" title="text">Students</a></li>
+                      <li><%= link_to 'Home', root_path %></a></li>
+                      <li><%= link_to 'About', about_path %></li>
+                      <li><%= link_to 'Course', enrollmca_path %></li>
                     </ul>
                   </div>
                   <div class="col-md-3 col-sm-6">

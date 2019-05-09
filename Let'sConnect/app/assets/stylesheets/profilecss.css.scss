@@ -1,0 +1,33 @@
+body{
+	margin:0px;
+	
+}
+.profile{
+	margin:0px;
+	padding:0px;
+	background:#e5e5e5;
+}
+.profileContainer{
+	display: flex;
+	flex-direction: row;
+	background:#e5e5e5;
+}
+.profilePic{
+	margin-left: 5px;
+	margin-top: 20px;
+}
+.img{
+	height:300px;
+	width:300px;
+	flex-basis:25%;
+	left:25%;
+}
+.profileDetail{
+	
+	
+	margin-top: 50px;
+	height:300px;
+	background-color: red;
+	flex-basis:65%;
+}
+

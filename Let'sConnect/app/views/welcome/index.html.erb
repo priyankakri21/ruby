@@ -1,0 +1,184 @@
+   <%= render 'banner' %>
+    <%= render 'carousel' %>
+      
+      <!-- next-section -->
+      <section class="cmn-section">
+        <div class="container">
+          <h2 class="course-heading">Our Courses</h2>
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("course-1.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="course-stream">
+                    B.Tech
+                  </div>
+                  <h3 class="text-head">B.Tech</h3>
+                  <p class="text-para">We offers regular full-time courses focused on industry-aligned teaching, augmented by industrial visits and add-on courses for knowledge boosting, skill-oriented training.</p>
+                  <%= link_to('Enroll now!', enrollbtech_path, { :class=>"login-btn enroll"}) %>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("course-2.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="course-stream">
+                    MCA
+                  </div>
+                  <h3 class="text-head">Computer Applications</h3>
+                  <p class="text-para">The Programme thrust is on giving the students a thorough and sound background in theoretical and application-oriented courses relevant to the latest computer software development. </p>
+                  <%= link_to('Enroll now!', enrollmca_path, { :class=>"login-btn enroll"}) %>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("course-3.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="course-stream">
+                    Business
+                  </div>
+                  <h3 class="text-head">Business Studies</h3>
+                  <p class="text-para">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+                  <%= link_to('Enroll now!', enrollbtech_path, { :class=>"login-btn enroll"}) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- next section -->
+      <section class="cmn-section color">
+        <div class="container">
+          <h2 class="course-heading">Recent from blog</h2>
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("course-5.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="blog-stat">
+                    <a href="#">August 12, 2018</a>
+                    <a href="#">Admin</a>
+                    <a href="#"><i class="fa fa-commenting"></i>3</a>
+                  </div>
+                  <h3 class="text-head">How to standout at start of your UX Career</h3>
+                  <p class="text-para">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("image_2.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="blog-stat">
+                    <a href="#">August 12, 2018</a>
+                    <a href="#">Admin</a>
+                    <a href="#"><i class="fa fa-commenting"></i>3</a>
+                  </div>
+                  <h3 class="text-head">How to standout at start of your UX Career</h3>
+                  <p class="text-para">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("image_6.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="blog-stat">
+                    <a href="#">August 12, 2018</a>
+                    <a href="#">Admin</a>
+                    <a href="#"><i class="fa fa-commenting"></i>3</a>
+                  </div>
+                  <h3 class="text-head">How to standout at start of your UX Career</h3>
+                  <p class="text-para">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- event-section started -->
+      <section class="cmn-section">
+        <div class="container">
+          <h2 class="course-heading">Our Latest Events</h2>
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("event-1.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="blog-stat">
+                    <a href="#">Sep 10, 2018</a>
+                    <a href="#">Admin</a>
+                    <a href="#"><i class="fa fa-commenting"></i>3</a>
+                  </div>
+                  <h3 class="text-head">Intern Bootcamp Meetup 2018</h3>
+                  <div class="event-time">
+                    <span><i class="fa fa-clock-o"></i>10:30AM-03:30PM</span>
+                    <span><i class="fa fa-map-o"></i>Venue Main Campus</span>
+                  </div>
+                  <p class="text-para">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                 <%= link_to 'Join Event', event_path, :class => "join-event" %> <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("event-4.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="blog-stat">
+                    <a href="#">Sep 10, 2018</a>
+                    <a href="#">Admin</a>
+                    <a href="#"><i class="fa fa-commenting"></i>3</a>
+                  </div>
+                  <h3 class="text-head">Intern Bootcamp Meetup 2018</h3>
+                  <div class="event-time">
+                    <span><i class="fa fa-clock-o"></i>10:30AM-03:30PM</span>
+                    <span><i class="fa fa-map-o"></i>Venue Main Campus</span>
+                  </div>
+                  <p class="text-para">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                  <%= link_to 'Join Event', event_path, :class => "join-event" %> <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="shadow">
+                <div class="course-img">
+                  <%= image_tag("event-3.jpg", class: "img-responsive", alt: "course") %>
+                </div>
+                <div class="course-text">
+                  <div class="blog-stat">
+                    <a href="#">Sep 10, 2018</a>
+                    <a href="#">Admin</a>
+                    <a href="#"><i class="fa fa-commenting"></i>3</a>
+                  </div>
+                  <h3 class="text-head">Intern Bootcamp Meetup 2018</h3>
+                  <div class="event-time">
+                    <span><i class="fa fa-clock-o"></i>10:30AM-03:30PM</span>
+                    <span><i class="fa fa-map-o"></i>Venue Main Campus</span>
+                  </div>
+                  <p class="text-para">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                  <%= link_to 'Join Event', event_path, :class => "join-event" %> <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+     

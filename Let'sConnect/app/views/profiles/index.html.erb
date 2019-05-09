@@ -1,0 +1,42 @@
+
+<div class=" profile container-fluid">
+<div class=" profileContainer container-fluid" >
+ 	<div class="profilePic" >
+<% if current_user.profile.present? && current_user.profile.image.present? %>
+ <%= image_tag current_user.profile.image.url(:medium) ,class: "img" %>
+ <% else %>
+  <%= image_tag("avatar.png", class: "img-responsive img", alt: "avtar") %>
+   <% end %>
+ 	</div>
+ 	<div class="profileDetail" >
+ 	   <h3>Username:<strong><%= current_user.username %></strong>.</h3>
+ 	   <h3>Email:<strong><%= current_user.email %></strong>
+  </h3>
+ 	</div>
+ 	
+</div>
+
+<%= link_to "Add Photo ", addProfile_path, class: "btn btn-primary" %>
+
+<%= link_to "My Cabinate", docs_path, class: "btn btn-primary" %>
+
+<%= link_to "Group chat", pages_path, class: "btn btn-primary" %>
+
+</div>
+
+<!-- Post -->
+
+
+
+
+<% if user_signed_in? %>
+ 
+  
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+-
+

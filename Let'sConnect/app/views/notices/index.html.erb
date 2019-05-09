@@ -1,0 +1,23 @@
+<div class="cmn-section container notice">
+
+<table class="table table-striped">
+   <tr>
+   		<th>Date</th>
+   		<th>Title</th>
+   		<th>Description</th>
+   		<th>pdf</th>
+   </thr>
+
+   <% @notice.each do |n| %>
+     <tr>
+     	<td><%= n.created_at.strftime("%B %d %Y ") %></td>
+     	<td><%= n.title %></td>
+     	<td><%= n.description %></td>
+     	<td><%= link_to n.document_file_name, n.document.url,  :target=>"_blank" if n.document_file_name.present? %></td>
+
+     </tr>
+   <% end %>
+
+
+</table>
+</div>
